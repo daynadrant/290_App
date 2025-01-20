@@ -12,20 +12,19 @@ import { useRouter } from "expo-router";
 import styles from "./welcome.style";
 import { icons, SIZES } from "../../../constants";
 
-const jobTypes = ["Full-time", "Part-time", "Contractor"];
+const plantTypes = ["Lettuce", "Kale", "Chard"];
 
 const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
   const router = useRouter();
-  const [activeJobType, setActiveJobType] = useState("Full-time");
+  const [plantType, setPlantType] = useState("Lettuce");
 
   return (
     <View>
       <View style={styles.container}>
-        <Text style={styles.userName}>Hello Adrian</Text>
-        <Text style={styles.welcomeMessage}>Find your perfect job</Text>
+        <Text style={styles.welcomeMessage}>Monitor your hydroponic garden</Text>
       </View>
 
-      <View style={styles.searchContainer}>
+      {/* <View style={styles.searchContainer}>
         <View style={styles.searchWrapper}>
           <TextInput
             style={styles.searchInput}
@@ -46,23 +45,23 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
 
       <View style={styles.tabsContainer}>
         <FlatList
-          data={jobTypes}
+          data={plantTypes}
           renderItem={({ item }) => (
             <TouchableOpacity
-              style={styles.tab(activeJobType, item)}
+              style={styles.tab(plantType, item)}
               onPress={() => {
-                setActiveJobType(item);
-                router.push(`/search/${item}`);
+                setPlantType(item);
+                //router.push(`/search/${item}`);
               }}
             >
-              <Text style={styles.tabText(activeJobType, item)}>{item}</Text>
+              <Text style={styles.tabText(plantType, item)}>{item}</Text>
             </TouchableOpacity>
           )}
           keyExtractor={(item) => item}
           contentContainerStyle={{ columnGap: SIZES.small }}
           horizontal
         />
-      </View>
+      </View> */}
     </View>
   );
 };

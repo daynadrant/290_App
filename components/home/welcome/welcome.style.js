@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
     color: COLORS.secondary,
   },
   welcomeMessage: {
+    textAlign: 'center',
     fontFamily: FONT.bold,
     fontSize: SIZES.xLarge,
     color: COLORS.primary,

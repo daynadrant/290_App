@@ -1,6 +1,7 @@
 {
   "expo": {
-    "scheme": "acme",
+    "scheme": "acme", 
+    "entryPoint": "./node_modules/expo-router/entry.js",
     "web": {
       "bundler": "metro"
     },
